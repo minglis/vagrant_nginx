@@ -2,6 +2,8 @@
 
 #### via:
 [http://blog.nategood.com/client-side-certificate-authentication-in-ngi](http://blog.nategood.com/client-side-certificate-authentication-in-ngi)
+[http://www.xenocafe.com/tutorials/linux/centos/openssl/self_signed_certificates/index.php](http://www.xenocafe.com/tutorials/linux/centos/openssl/self_signed_certificates/index.php)
+[https://gist.github.com/mtigas/952344](https://gist.github.com/mtigas/952344)
 
 #### Certs:
 
@@ -23,8 +25,15 @@
 	# Sign the client certificate with our CA cert.  Unlike signing our own server cert, this is what we want to do.
 	openssl x509 -req -days 365 -in client.csr -CA ca.crt -CAkey ca.key -set_serial 01 -out client.crt
 
+#### Remove passwords from keys for the server key to allow easy restart
+	openssl rsa -in server.key -out server.key
 
-
+#### Fix puppet bug
+	vagrant ssh
+	vagrant@precise64:~$ cd /etc/nginx/
+	vagrant@precise64:/etc/nginx$ sudo chown root:root server.*
+	vagrant@precise64:/etc/nginx$ sudo chown root:root ca.crt  
+	vagrant@precise64:/etc/nginx$ exit
 
 #### Testing:
 	curl -v -s -k --key client.key --cert client.crt https://localhost:4568
