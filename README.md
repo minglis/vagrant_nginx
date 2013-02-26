@@ -2,7 +2,9 @@
 
 #### via:
 [http://blog.nategood.com/client-side-certificate-authentication-in-ngi](http://blog.nategood.com/client-side-certificate-authentication-in-ngi)
+
 [http://www.xenocafe.com/tutorials/linux/centos/openssl/self_signed_certificates/index.php](http://www.xenocafe.com/tutorials/linux/centos/openssl/self_signed_certificates/index.php)
+
 [https://gist.github.com/mtigas/952344](https://gist.github.com/mtigas/952344)
 
 #### Certs:
