@@ -3,6 +3,8 @@ server {
   listen              443 ssl;
   ssl                 on;
   
+  error_log /var/log/nginx/error.log debug;
+
   ssl_certificate     /etc/nginx/server.crt;
   ssl_certificate_key /etc/nginx/server.key;
   ssl_client_certificate /etc/nginx/ca.crt;

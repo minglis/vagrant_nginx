@@ -7,6 +7,8 @@
 
 [https://gist.github.com/mtigas/952344](https://gist.github.com/mtigas/952344)
 
+[http://drumcoder.co.uk/blog/2011/oct/19/client-side-certificates-web-apps/](http://drumcoder.co.uk/blog/2011/oct/19/client-side-certificates-web-apps/)
+
 #### Certs:
 
 	# Create the CA Key and Certificate for signing Client Certs
