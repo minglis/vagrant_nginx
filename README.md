@@ -5,6 +5,8 @@
 
 - Install vagrant
 
+- generate certificates
+
 - vagrant up
 
 - Do puppet deploy fix outlined below (will fix at some point)
