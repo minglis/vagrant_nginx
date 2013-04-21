@@ -13,5 +13,12 @@ server {
   location / {
     root                /var/www;
     index               index.html;
+    add_header  DN      $ssl_client_s_dn;
+  }
+  
+  location /gateway {
+      proxy_pass http://192.168.1.64:8080/gateway;
+      proxy_set_header  DN      $ssl_client_s_dn;
+      proxy_set_header  X-Real-IP  $remote_addr;
   }
 }
