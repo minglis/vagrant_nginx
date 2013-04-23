@@ -27,21 +27,29 @@ class nginx {
 
   file { '/etc/nginx/server.crt':
         ensure  => present,
+        mode    => '0644',
+        owner    => 'root',
         source  => '/etc/puppet/files/modules/nginx/conf/server.crt'
   }
 
   file { '/etc/nginx/server.key':
         ensure  => present,
+        mode    => '0644',
+        owner    => 'root',
         source  => '/etc/puppet/files/modules/nginx/conf/server.key'
   }
 
   file { '/etc/nginx/ca.crt':
-        ensure  => present,
+        ensure   => present,
+        mode    => '0644',
+        owner    => 'root',
         source  => '/etc/puppet/files/modules/nginx/conf/ca.crt'
   }
 
   file { '/etc/nginx/sites-enabled/default':
         ensure  => present,
+        mode    => '0644',
+        owner    => 'root',        
         source  => '/etc/puppet/files/modules/nginx/etc/default'
   }
 
