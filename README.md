@@ -68,6 +68,10 @@ To generate your own certs follow this process EXACTLY. Place the new certs into
 	# p12 version of cert for browsers
 	openssl pkcs12 -export -clcerts -in client.crt -inkey client.key -out client.p12
 
+	# pfx for windows
+	openssl pkcs12 -export -out certificate.pfx -inkey privateKey.key -in certificate.crt -certfile CACert.crt
+
+
 
 #### Testing (note post 443 forwarded to 4568):
 	curl -v -s -k --key client.key --cert client.crt https://localhost:4568 
